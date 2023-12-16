@@ -45,6 +45,9 @@
     # tailscale
     services.tailscale.enable = true;
 
+    # ssh
+    services.openssh.enable = true;
+
     # sound with pipewire.
     sound.enable = true;
     hardware.pulseaudio.enable = false;
@@ -68,7 +71,6 @@
 	isNormalUser = true;
 	description = "blair";
 	extraGroups = [ "networkmanager" "wheel" ];
-	packages = with pkgs; [ ];
     };
 
     # unfree packages
@@ -129,9 +131,12 @@
     in [
 
 	    R-with-my-packages
+
+
+	    spice-vdagent
+
 	    wget
 	    proselint
-	    exa
 
 	    pandoc
 	    pandoc-eqnos
@@ -186,9 +191,6 @@
 # };
 
 # List services that you want to enable:
-
-# Enable the OpenSSH daemon.
-# services.openssh.enable = true;
 
 # Open ports in the firewall.
 # networking.firewall.allowedTCPPorts = [ ... ];
