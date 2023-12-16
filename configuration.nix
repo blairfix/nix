@@ -3,26 +3,20 @@
 
 {
     imports =
-	[ # Include the results of the hardware scan.
-	./hardware-configuration.nix
+	[ 
+	    ./hardware-configuration.nix
+	    ./r_packages.nix
 	];
 
     # bootloader
-    #boot.loader.systemd-boot.enable = true;
-    #boot.loader.efi.canTouchEfiVariables = true;
-
-    boot.loader.grub = {
-	enable = true;
-	useOSProber = true;
-	device = "/dev/vda1";
-	efiSupport = true;
-    };
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
-    networking.hostName = "blair_laptop"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # Define your hostname.
+    networking.hostName = "blair_laptop"; 
 
     # networking
     networking.networkmanager.enable = true;
@@ -40,18 +34,6 @@
 	wrapperFeatures.gtk = true;
     };
 
-    # X11 windowing system
-    #services.xserver.enable = true;
-
-    # KDE plasma 
-    #services.xserver.displayManager.sddm.enable = true;
-    #services.xserver.desktopManager.plasma5.enable = true;
-
-    # keymap in X11
-#    services.xserver = {
-#	layout = "us";
-#	xkbVariant = "";
-#    };
 
     # CUPS to print documents.
     services.printing.enable = true;
@@ -76,8 +58,6 @@
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
 
-
-
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.blair = {
 	isNormalUser = true;
@@ -88,111 +68,163 @@
     # unfree packages
     nixpkgs.config.allowUnfree = true;
 
+    # fonts
+    fonts.packages = with pkgs; [
+
+	freefont_ttf
+	noto-fonts 
+	dejavu_fonts
+	ubuntu_font_family 
+	liberation_ttf
+	font-awesome
+	roboto
+	wine64Packages.fonts
+
+    ];
+
     # system packages
+    environment.systemPackages = with pkgs; [
 
-    environment.systemPackages = with pkgs;
-    let
-	R-with-my-packages = rWrapper.override{ 
-	    packages = with rPackages; [ 
+	# wayland, sway and associated utilities
+	sway
+	swaybg
+	xwayland
+	light
+	gammastep
+	wl-clipboard 
+	wtype
+	sway-launcher-desktop
 
-		# R packages
-		#ggplot2 
-		#dplyr 
-		#data_table
-		#Rcpp
-		#RcppArmadillo
-		#BH
-		#mailR
-		#sf
-		
-		# blair's packages
-		(buildRPackage {
-		 name = "bfstr";
-		 src = fetchFromGitHub {
-		 owner = "blairfix";
-		 repo = "bfstr";
-		 rev = "master";
-		 sha256 = "sha256-3MT+tTQpcpoNbknadRf1QBPI0EXm3q+nMuL8GJ20bFM";
-		 };
-		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-		 })
+	# browser
+	firefox 
+	geckodriver 
+	lynx
 
-		(buildRPackage {
-		 name = "bfstat";
-		 src = fetchFromGitHub {
-		 owner = "blairfix";
-		 repo = "bfstat";
-		 rev = "master";
-		 sha256 = "sha256-fuCCJZHZoXkVycMnHZ37HGd2wwetLbAVWryjBNeWSUc";
-		 };
-		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-		 })
+	# file browser
+	gnome.nautilus
+	#dolphin
 
-		(buildRPackage {
-		 name = "bfgg";
-		 src = fetchFromGitHub {
-		 owner = "blairfix";
-		 repo = "bfgg";
-		 rev = "master";
-		 sha256 = "sha256-y2E8QYjiuHHVxgS+LXv5nYL8RBFDekD5nYgRdNZly7g";
-		 };
-		 propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
-		 })
-	    ]; 
-	};
-    in [
+	# terminal 
+	alacritty 
+	fzf 
+	ripgrep
+	eza
+	fd
+	tree
 
-	    R-with-my-packages
+	# utilities
+	git
+	htop 
+	trash-cli 
+	man-db 
+	man-pages
+	wget
+	unrar
+	aspell
+	gnuplot
+	wdiff
+	exiftool
+	qpdf
+	
 
-	    # packages
-	    spice-vdagent
+	# linode
+	s3cmd
+	certbot
 
-	    wget
-	    proselint
+	# audio
+	pavucontrol
 
-	    pandoc
-	    pandoc-eqnos
-	    git
+	# ssh and network
+	openssh 
+	sshpass
+	openvpn
+	tailscale
+	rtorrent
 
-	    gnumake
-	    gcc13
-	    armadillo
-	    geckodriver
-	    lynx
-	    fzf
-	    ripgrep
-	    fd
-	    trash-cli
+	# latex
+	texliveFull
+	texstudio
 
-	    zathura
-	    rsync
-	    rclone
-	    syncthing
-	    kid3
-	    boost
 
-	    firefox
-	    neovim
-	    tailscale
-	    alacritty  
-	    libreoffice
-	    htop
-	    hugo
-	    
-	    # python
-	    (python3.withPackages(ps: with ps; [ 
+	# text editors and command line tools for text
+	neovim 
+	vimPlugins.vim-plug
+	pandoc
+	pandoc-eqnos
+	haskellPackages.pandoc-crossref
+	python311Packages.docx2txt
+	typos
+	proselint
 
-				  pandas 
-				  datetime
-				  tqdm
-				  grip
-				  imutils
-				  linode-cli
-				  python310Packages.selenium
-				  python310Packages.radian
+	# office suites
+	libreoffice
+	wpsoffice
 
-	    ]))
-	];
+	# documents viewers
+	okular 
+	evince
+	calibre
+	zathura
+
+	# image viewers and image manipulation
+	feh 
+	inkscape 
+	gimp 
+	pngquant 
+	jpegoptim 
+	imagemagick
+	imv
+
+	# audio and video tools
+	audacity 
+	gnome.cheese
+	ffmpeg
+	vlc
+	kazam
+
+	# finance
+	gnucash
+
+	# audio meta data
+	kid3
+
+	# syncing utilities
+	rclone
+	rsync
+	syncthing
+	dropbox
+
+	# misc tools
+	pdfgrep 
+	engauge-digitizer
+
+
+	# android packages
+	libmtp
+	heimdall
+	android-tools
+
+	# icon themes
+	lxappearance
+	#breeze
+
+	# screenshot
+	grim
+	slurp
+
+	# cd
+	k3b
+	cdrtools
+	cdrdao
+
+	# hugo
+	hugo
+
+	# meetings
+	skypeforlinux
+	zoom
+
+    ];
 
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
