@@ -67,8 +67,20 @@
     # unfree packages
     nixpkgs.config.allowUnfree = true;
 
-    # system packages
+    # fonts
+    fonts.packages = with pkgs; [
 
+	freefont_ttf
+	noto-fonts 
+	dejavu_fonts
+	ubuntu-font-family 
+	liberation_ttf
+	font-awesome
+	roboto
+
+    ];
+
+    # system packages
     environment.systemPackages = with pkgs; [
 
 	# wayland, sway and associated utilities
@@ -127,6 +139,7 @@
 	rtorrent
 
 	# latex
+	texliveFull
 	texstudio
 
 
