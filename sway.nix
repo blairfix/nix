@@ -101,26 +101,18 @@
 	man-db 
 	man-pages
 	wget
-	pacman-contrib
 	unrar
 	aspell
-	aspell-en
 	gnuplot
 	wdiff
-	perl-image-exiftool
+	exiftool
 	qpdf
-
-	# computation
-	#openblas
-	blas
 
 	# linode
 	s3cmd
 	certbot
 
 	# audio
-	alsa-utils
-	pulseaudio
 	pavucontrol
 
 	# ssh and network
@@ -133,15 +125,6 @@
 	rtorrent
 
 	# latex
-	texlive-basic
-	texlive-latexrecommended
-	texlive-plaingeneric
-	texlive-fontsrecommended
-
-	texlive-fontsextra 
-	texlive-bibtexextra 
-	texlive-latexextra
-
 	texstudio
 
 
@@ -151,8 +134,7 @@
 	docx2txt
 
 	# office suites
-	libreoffice-fresh
-
+	libreoffice
 
 	# documents viewers
 	okular 
@@ -188,10 +170,8 @@
 	syncthing
 
 	# misc command line tools
-	xdotool 
 	gprename 
 	pdfgrep 
-	xclip 
 	source-highlight
 
 
@@ -217,7 +197,6 @@
 	hugo
 	nodejs
 	npm
-
 
     ];
 
