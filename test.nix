@@ -138,6 +138,7 @@
 		 };
 		 propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
 		 })
+
 	    ]; 
 	};
     in [
