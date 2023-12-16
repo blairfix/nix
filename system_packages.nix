@@ -5,7 +5,6 @@
 	# vm clipboard
 	spice
 
-
 	# sway and associated utilities
 	swaybg
 	xwayland

@@ -10,6 +10,9 @@
 	    ./fonts.nix
 	];
 
+    # vm
+    services.spice-vdagentd.enable = true;
+
     # bootloader
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
