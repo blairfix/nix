@@ -2,6 +2,10 @@
 {
     environment.systemPackages = with pkgs;  [ 
 
+	# vm clipboard
+	spice-vdagent
+
+
 	# sway and associated utilities
 	swaybg
 	xwayland
