@@ -178,7 +178,7 @@
 
 	# misc tools
 	pdfgrep 
-	engauge
+	engauge-digitizer
 
 
 	# android packages
