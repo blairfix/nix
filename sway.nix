@@ -17,9 +17,6 @@
     # Define your hostname.
     networking.hostName = "blair_laptop"; 
 
-    # Enables wireless support via wpa_supplicant.
-    networking.wireless.enable = true;  
-
     # networking
     networking.networkmanager.enable = true;
 
@@ -77,7 +74,7 @@
 	# wayland, sway and associated utilities
 	sway
 	swaybg
-	xorg-xwayland
+	xwayland
 	light
 	gammastep
 	wl-clipboard 
@@ -94,7 +91,7 @@
 	alacritty 
 	fzf 
 	ripgrep
-	exa
+	eza
 	fd
 	tree
 
@@ -215,7 +212,6 @@
 	k3b
 	cdrtools
 	cdrdao
-	dvd+rw-tools
 
 	# hugo
 	hugo
