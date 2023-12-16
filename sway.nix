@@ -77,6 +77,7 @@
 	liberation_ttf
 	font-awesome
 	roboto
+	wine64Packages.fonts
 
     ];
 
@@ -145,6 +146,7 @@
 
 	# text editors and command line tools for text
 	neovim 
+	vimPlugins.vim-plug
 	pandoc
 	pandoc-eqnos
 	haskellPackages.pandoc-crossref
@@ -188,6 +190,7 @@
 	rclone
 	rsync
 	syncthing
+	dropbox
 
 	# misc tools
 	pdfgrep 
