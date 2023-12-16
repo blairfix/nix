@@ -134,7 +134,7 @@
 	neovim 
 	pandoc
 	pandoc-eqnos
-	pandoc-crossref
+	haskellPackages.pandoc-crossref
 	python311Packages.docx2txt
 	typos
 	proselint
