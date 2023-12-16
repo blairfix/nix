@@ -8,8 +8,15 @@
 	];
 
     # bootloader
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    #boot.loader.systemd-boot.enable = true;
+    #boot.loader.efi.canTouchEfiVariables = true;
+
+    boot.loader.grub = {
+	enable = true;
+	useOSProber = true;
+	device = "/dev/vda1";
+	efiSupport = true;
+    };
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -26,18 +33,25 @@
     # internationalisation properties
     i18n.defaultLocale = "en_CA.UTF-8";
 
+
+    # enable sway window manager
+    programs.sway = {
+	enable = true;
+	wrapperFeatures.gtk = true;
+    };
+
     # X11 windowing system
-    services.xserver.enable = true;
+    #services.xserver.enable = true;
 
     # KDE plasma 
-    services.xserver.displayManager.sddm.enable = true;
-    services.xserver.desktopManager.plasma5.enable = true;
+    #services.xserver.displayManager.sddm.enable = true;
+    #services.xserver.desktopManager.plasma5.enable = true;
 
     # keymap in X11
-    services.xserver = {
-	layout = "us";
-	xkbVariant = "";
-    };
+#    services.xserver = {
+#	layout = "us";
+#	xkbVariant = "";
+#    };
 
     # CUPS to print documents.
     services.printing.enable = true;
@@ -58,8 +72,6 @@
 	alsa.support32Bit = true;
 	pulse.enable = true;
     };
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;
@@ -84,14 +96,14 @@
 	    packages = with rPackages; [ 
 
 		# R packages
-		ggplot2 
-		dplyr 
-		data_table
-		Rcpp
-		RcppArmadillo
-		BH
-		mailR
-		sf
+		#ggplot2 
+		#dplyr 
+		#data_table
+		#Rcpp
+		#RcppArmadillo
+		#BH
+		#mailR
+		#sf
 		
 		# blair's packages
 		(buildRPackage {
