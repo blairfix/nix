@@ -78,6 +78,8 @@
 	light
 	gammastep
 	wl-clipboard 
+	wtype
+	sway-launcher-desktop
 
 	# browser
 	firefox 
@@ -108,6 +110,7 @@
 	wdiff
 	exiftool
 	qpdf
+	
 
 	# linode
 	s3cmd
@@ -130,10 +133,15 @@
 	# text editors and command line tools for text
 	neovim 
 	pandoc
+	pandoc-eqnos
+	pandoc-crossref
 	python311Packages.docx2txt
+	typos
+	proselint
 
 	# office suites
 	libreoffice
+	wpsoffice
 
 	# documents viewers
 	okular 
@@ -155,6 +163,7 @@
 	gnome.cheese
 	ffmpeg
 	vlc
+	kazam
 
 	# finance
 	gnucash
@@ -167,8 +176,9 @@
 	rsync
 	syncthing
 
-	# misc command line tools
+	# misc tools
 	pdfgrep 
+	engauge
 
 
 	# android packages
@@ -191,6 +201,10 @@
 
 	# hugo
 	hugo
+
+	# meetings
+	skypeforlinux
+	zoom
 
     ];
 
