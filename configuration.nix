@@ -85,8 +85,7 @@
     # system packages
     environment.systemPackages = with pkgs; [
 
-	# wayland, sway and associated utilities
-	sway
+	# sway and associated utilities
 	swaybg
 	xwayland
 	light
