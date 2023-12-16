@@ -33,6 +33,14 @@
 	wrapperFeatures.gtk = true;
     };
 
+    # i3 
+    services.xserver = {
+	enable = true;
+    };
+
+    windowManager.i3 = {
+      enable = true;
+    }
 
     # CUPS to print documents.
     services.printing.enable = true;
@@ -84,14 +92,10 @@
     environment.systemPackages = with pkgs; [
 
 	# xorg, i3 and associated utilities
-	xorg-server 
-	xorg-xinit 
-	i3-wm 
 	i3blocks 
 	i3status 
 	redshift
 	wmctrl
-	xorg-xkill
 	dmenu
 	picom
 
