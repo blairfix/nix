@@ -3,8 +3,7 @@
     environment.systemPackages = with pkgs;  [ 
 
 	# vm clipboard
-	spice-vdagent
-	spice-webdavd
+	spice
 
 
 	# sway and associated utilities
