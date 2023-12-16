@@ -96,6 +96,7 @@
 	tree
 
 	# utilities
+	git
 	htop 
 	trash-cli 
 	man-db 
@@ -119,8 +120,6 @@
 	openssh 
 	sshpass
 	openvpn
-	networkmanager-openvpn
-	network-manager-applet
 	tailscale
 	rtorrent
 
@@ -131,7 +130,7 @@
 	# text editors and command line tools for text
 	neovim 
 	pandoc
-	docx2txt
+	python311Packages.docx2txt
 
 	# office suites
 	libreoffice
@@ -141,7 +140,6 @@
 	evince
 	calibre
 	zathura
-	zathura-pdf-mupdf
 
 	# image viewers and image manipulation
 	feh 
@@ -154,7 +152,7 @@
 
 	# audio and video tools
 	audacity 
-	cheese 
+	gnome.cheese
 	ffmpeg
 	vlc
 
@@ -170,9 +168,7 @@
 	syncthing
 
 	# misc command line tools
-	gprename 
 	pdfgrep 
-	source-highlight
 
 
 	# android packages
@@ -182,7 +178,7 @@
 
 	# icon themes
 	lxappearance
-	breeze
+	#breeze
 
 	# screenshot
 	grim
@@ -195,8 +191,6 @@
 
 	# hugo
 	hugo
-	nodejs
-	npm
 
     ];
 
