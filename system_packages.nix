@@ -4,6 +4,7 @@
 
 	# vm clipboard
 	spice-vdagent
+	spice-webdavd
 
 
 	# sway and associated utilities
