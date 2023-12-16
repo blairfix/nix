@@ -14,8 +14,11 @@
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
-    networking.hostName = "blair_laptop"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # Define your hostname.
+    networking.hostName = "blair_laptop"; 
+
+    # Enables wireless support via wpa_supplicant.
+    networking.wireless.enable = true;  
 
     # networking
     networking.networkmanager.enable = true;
@@ -71,10 +74,153 @@
 
     environment.systemPackages = with pkgs; [
 
-	spice-vdagent
-	nvim
-	git
-	alacritty
+	# wayland, sway and associated utilities
+	sway
+	swaybg
+	xorg-xwayland
+	light
+	gammastep
+	wl-clipboard 
+
+	# browser
+	firefox 
+	geckodriver 
+	lynx
+
+	# file browser
+	dolphin
+
+	# terminal 
+	alacritty 
+	fzf 
+	ripgrep
+	exa
+	fd
+	tree
+
+	# utilities
+	htop 
+	trash-cli 
+	man-db 
+	man-pages
+	wget
+	pacman-contrib
+	unrar
+	aspell
+	aspell-en
+	gnuplot
+	wdiff
+	perl-image-exiftool
+	qpdf
+
+	# computation
+	#openblas
+	blas
+
+	# linode
+	s3cmd
+	certbot
+
+	# audio
+	alsa-utils
+	pulseaudio
+	pavucontrol
+
+	# ssh and network
+	openssh 
+	sshpass
+	openvpn
+	networkmanager-openvpn
+	network-manager-applet
+	tailscale
+	rtorrent
+
+	# latex
+	texlive-basic
+	texlive-latexrecommended
+	texlive-plaingeneric
+	texlive-fontsrecommended
+
+	texlive-fontsextra 
+	texlive-bibtexextra 
+	texlive-latexextra
+
+	texstudio
+
+
+	# text editors and command line tools for text
+	neovim 
+	pandoc
+	docx2txt
+
+	# office suites
+	libreoffice-fresh
+
+
+	# documents viewers
+	okular 
+	evince
+	calibre
+	zathura
+	zathura-pdf-mupdf
+
+	# image viewers and image manipulation
+	feh 
+	inkscape 
+	gimp 
+	pngquant 
+	jpegoptim 
+	imagemagick
+	imv
+
+	# audio and video tools
+	audacity 
+	cheese 
+	ffmpeg
+	vlc
+
+	# finance
+	gnucash
+
+	# audio meta data
+	kid3
+
+	# syncing utilities
+	rclone
+	rsync
+	syncthing
+
+	# misc command line tools
+	xdotool 
+	gprename 
+	pdfgrep 
+	xclip 
+	source-highlight
+
+
+	# android packages
+	libmtp
+	heimdall
+	android-tools
+
+	# icon themes
+	lxappearance
+	breeze
+
+	# screenshot
+	grim
+	slurp
+
+	# cd
+	k3b
+	cdrtools
+	cdrdao
+	dvd+rw-tools
+
+	# hugo
+	hugo
+	nodejs
+	npm
 
 
     ];

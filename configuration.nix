@@ -144,7 +144,7 @@
 
 	    R-with-my-packages
 
-
+	    # packages
 	    spice-vdagent
 
 	    wget
