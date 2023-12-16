@@ -102,9 +102,15 @@
 		 owner = "blairfix";
 		 repo = "hmod";
 		 rev = "master";
-		 sha256 = "sha256-8936370c9c29eae5af34f80214e09086b7d13b58";
+		 sha256 = "sha256-XMMNUk5suFWxEnzvpy8BBMr/GGm1/RID0M055R+HRM0";
 		 };
-		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat ];
+		 propagatedBuildInputs = [ 
+		     Rcpp 
+		     RcppArmadillo 
+		     BH 
+		     RcppZiggurat 
+		     data_table 
+		 ];
 		 })
 
 
