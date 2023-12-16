@@ -5,6 +5,7 @@
 	[ 
 	    ./hardware-configuration.nix
 	    ./r_packages.nix
+	    ./python_packages.nix
 	];
 
     # bootloader
