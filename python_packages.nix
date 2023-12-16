@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-    environment.systemPackages = with pkgs  [ 
+    environment.systemPackages = with pkgs;  [ 
 
 	(
 	 python3.withPackages(
