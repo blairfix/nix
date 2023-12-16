@@ -126,8 +126,8 @@
 	exiftool
 	qpdf
 	
-
 	# linode
+	linode-cli
 	s3cmd
 	certbot
 
