@@ -95,18 +95,17 @@
 		 };
 		 propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
 		 })
-#
-#		(buildRPackage {
-#		 name = "hmod";
-#		 src = fetchFromGitHub {
-#		 owner = "blairfix";
-#		 repo = "hmod";
-#		 rev = "master";
-#		 sha256 = "";
-#		 };
-#		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat ];
-#		 })
-#
+
+		(buildRPackage {
+		 name = "hmod";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "hmod";
+		 rev = "master";
+		 sha256 = "sha256-8936370c9c29eae5af34f80214e09086b7d13b58";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat ];
+		 })
 
 
 	    ];
