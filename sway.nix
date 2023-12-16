@@ -83,6 +83,18 @@
     # system packages
     environment.systemPackages = with pkgs; [
 
+	# xorg, i3 and associated utilities
+	xorg-server 
+	xorg-xinit 
+	i3-wm 
+	i3blocks 
+	i3status 
+	redshift
+	wmctrl
+	xorg-xkill
+	dmenu
+	picom
+
 	# wayland, sway and associated utilities
 	sway
 	swaybg
