@@ -43,6 +43,49 @@
 	};
     };
 
-    
+ 
+    # media backup
+    #----------------------------------------
+
+    systemd.timers."media_backup" = {
+	wantedBy = [ "timers.target" ];
+	timerConfig = {
+	    OnCalendar="*-*-* 22:00:00";
+	    RandomizedDelaySec = "400";
+	    Persistent = "true";
+	    Unit = "media_backup.service";
+	};
+    };
+
+    systemd.services."media_backup" = {
+	serviceConfig = {
+	    Type = "simple";
+	    User = "blair";
+	    ExecStart="/home/blair/cronjobs/active/media_backup";
+	};
+    };
+
+  
+    # rclone
+    #----------------------------------------
+
+    systemd.timers."rclone" = {
+	wantedBy = [ "timers.target" ];
+	timerConfig = {
+	    OnCalendar="*-*-* 19:32:00";
+	    RandomizedDelaySec = "400";
+	    Persistent = "true";
+	    Unit = "rclone.service";
+	};
+    };
+
+    systemd.services."rclone" = {
+	serviceConfig = {
+	    Type = "simple";
+	    User = "blair";
+	    ExecStart="/home/blair/cronjobs/active/rclone";
+	};
+    };
+  
 
 }
