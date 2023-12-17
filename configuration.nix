@@ -9,7 +9,7 @@
 	    ./system_packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    #./system_timers.nix
+	    ./system_server_timers.nix
 	    ./system_user_timers.nix
 	];
 
