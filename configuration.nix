@@ -14,7 +14,7 @@
 	];
 
     # vm
-    services.spice-vdagentd.enable = true;
+    #services.spice-vdagentd.enable = true;
 
     # bootloader
     boot.loader.systemd-boot.enable = true;
@@ -39,6 +39,16 @@
     programs.sway = {
 	enable = true;
 	wrapperFeatures.gtk = true;
+    };
+
+    # syncthing
+    services = {
+	syncthing = {
+	    enable = true;
+	    user = "blair";
+	    dataDir = "/home/blair/Sync"; 
+	    #configDir = "/home/blair/.config/syncthing";
+	};
     };
 
     # cups
