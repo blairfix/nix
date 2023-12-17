@@ -1,7 +1,7 @@
 { config, ... }:
 {
 
-    systemd.user.timers."dropsync" = {
+    systemd.timers."dropsync" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
 	    OnCalendar = "*-*-*  *:05:00";
@@ -11,7 +11,7 @@
 	};
     };
 
-    systemd.user.services."dropsync" = {
+    systemd.services."dropsync" = {
 	serviceConfig = {
 	    Type = "simple";
 	    User = "blair";
