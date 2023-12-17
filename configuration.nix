@@ -8,7 +8,7 @@
 	    ./python_packages.nix
 	    ./system_packages.nix
 	    ./fonts.nix
-	    #./nvim.nix
+	    ./nvim.nix
 	];
 
     # vm
