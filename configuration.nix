@@ -38,6 +38,7 @@
 	wrapperFeatures.gtk = true;
     };
 
+    # neo vim
     programs.neovim = {
 	enable = true;
 	defaultEditor = true;
