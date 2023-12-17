@@ -38,6 +38,11 @@
 	wrapperFeatures.gtk = true;
     };
 
+    # neovim
+    programs.neovim = {
+	enable = true;
+	defaultEditor = true;
+    };
 
     # cups
     services.printing.enable = true;
@@ -78,8 +83,8 @@
 
     # home directories
     systemd.tmpfiles.rules = [
-        "d /home/blair/Desktop 755 blair users -"
-        "d /home/blair/Downloads 755 blair users -"
+	"d /home/blair/Desktop 755 blair users -"
+	    "d /home/blair/Downloads 755 blair users -"
     ];
 
 
