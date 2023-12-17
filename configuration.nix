@@ -38,10 +38,14 @@
 	wrapperFeatures.gtk = true;
     };
 
-    # neovim
     programs.neovim = {
 	enable = true;
 	defaultEditor = true;
+	configure = {
+	    packages.myVimPackage = with pkgs.vimPlugins; {
+		start = [ goyo-vim thesaurus_query-vim ];
+	    };
+	};
     };
 
     # cups
