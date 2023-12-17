@@ -6,7 +6,7 @@
     systemd.timers."blair_backup" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar = "OnCalendar=*-*-*01:00:0";
+	    OnCalendar="*-*-* 01:00:00";
 	    RandomizedDelaySec = "400";
 	    Persistent = "true";
 	    Unit = "blair_backup.service";
