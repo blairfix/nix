@@ -1,23 +1,21 @@
 { config, ... }:
 {
 
-    systemd.user.timers."hello-world" = {
+    systemd.user.timers."dropsync" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnBootSec = "5m";
-	    OnUnitActiveSec = "5m";
-	    Unit = "hello-world.service";
+	    OnCalendar = "*-*-*  *:05:00";
+	    RandomizedDelaySec = "400";
+	    Persistent = "true";
+	    Unit = "dropsync.service";
 	};
     };
 
-    systemd.user.services."hello-world" = {
-	script = ''
-	    set -eu
-	    ${pkgs.coreutils}/bin/echo "Hello World"
-	    '';
+    systemd.user.services."dropsync" = {
 	serviceConfig = {
-	    Type = "oneshot";
-	    User = "root";
+	    Type = "simple";
+	    User = "blair";
+	    ExecStart="/home/blair/Dropbox/bin/dropsync";
 	};
     };
 
