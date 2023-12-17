@@ -9,6 +9,5 @@
 		start = [ goyo-vim  ];
 	    };
 	};
-    extraConfig = ''source ~/.config/nvim/init.vim'';
     };
 }
