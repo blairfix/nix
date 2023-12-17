@@ -42,6 +42,9 @@
     programs.neovim = {
 	enable = true;
 	defaultEditor = true;
+	plugins = [
+	    pkgs.vimPlugins.goyo-vim
+	];
     };
 
     # cups
