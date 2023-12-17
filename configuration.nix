@@ -8,6 +8,7 @@
 	    ./python_packages.nix
 	    ./system_packages.nix
 	    ./fonts.nix
+	    ./nvim.nix
 	];
 
     # vm
@@ -36,17 +37,6 @@
     programs.sway = {
 	enable = true;
 	wrapperFeatures.gtk = true;
-    };
-
-    # neo vim
-    programs.neovim = {
-	enable = true;
-	defaultEditor = true;
-	configure = {
-	    packages.myVimPackage = with pkgs.vimPlugins; {
-		start = [ goyo-vim thesaurus_query-vim ];
-	    };
-	};
     };
 
     # cups
