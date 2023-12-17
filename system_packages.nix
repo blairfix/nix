@@ -66,7 +66,7 @@
 
 
 	# text editors and command line tools for text
-	#neovim 
+	neovim 
 	vimPlugins.vim-plug
 	pandoc
 	pandoc-eqnos
