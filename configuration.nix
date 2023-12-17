@@ -29,7 +29,7 @@
     # time zone
     time.timeZone = "America/Edmonton";
 
-    # internationalisation properties
+    # utf8 setting
     i18n.defaultLocale = "en_CA.UTF-8";
 
     # enable sway window manager
@@ -72,6 +72,18 @@
     # unfree packages
     nixpkgs.config.allowUnfree = true;
 
-    system.stateVersion = "23.05"; # Did you read the comment?
+
+    # for bash scripts 
+    services.envfs.enable = true;
+
+    # home directories
+    systemd.tmpfiles.rules = [
+        "d /home/blair/Desktop 755 blair users -"
+        "d /home/blair/Downloads 755 blair users -"
+    ];
+
+
+    # version 
+    system.stateVersion = "23.05"; 
 
 }

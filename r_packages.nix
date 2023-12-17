@@ -104,13 +104,7 @@
 		 rev = "master";
 		 sha256 = "sha256-XMMNUk5suFWxEnzvpy8BBMr/GGm1/RID0M055R+HRM0";
 		 };
-		 propagatedBuildInputs = [ 
-		     Rcpp 
-		     RcppArmadillo 
-		     BH 
-		     RcppZiggurat 
-		     data_table 
-		 ];
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat data_table ];
 		 })
 
 
