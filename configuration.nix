@@ -39,6 +39,7 @@
     programs.sway = {
 	enable = true;
 	wrapperFeatures.gtk = true;
+	xdg.portal.wlr.enable = true;
     };
 
     # syncthing
