@@ -39,8 +39,10 @@
     programs.sway = {
 	enable = true;
 	wrapperFeatures.gtk = true;
-	xdg.portal.wlr.enable = true;
     };
+
+    # wayland screen sharing
+    xdg.portal.wlr.enable = true;
 
     # syncthing
     services = {
