@@ -95,7 +95,7 @@
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
 	    OnCalendar= "*-*-* 21:38:00";
-	    AccuracySe c= "1sec";
+	    AccuracySec= "1sec";
 	    Persistent = "true";
 	    Unit = "forbes.service";
 	};
