@@ -2,6 +2,9 @@
 {
     environment.systemPackages = with pkgs;  [ 
 
+	# iso generator
+	nixos-generators
+
 	# vm clipboard
 	spice
 
