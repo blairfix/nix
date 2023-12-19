@@ -6,11 +6,11 @@
 	    ./hardware-configuration.nix
 	    ./r_packages.nix
 	    ./python_packages.nix
-	    ./system_packages.nix
+	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    ./system_server_timers.nix
-	    ./system_user_timers.nix
+	    ./timers_server.nix
+	    ./timers_user.nix
 	];
 
     # vm
