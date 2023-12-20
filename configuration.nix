@@ -3,7 +3,7 @@
 {
     imports =
 	[ 
-	./hardware-configuration.nix
+	    ./hardware-configuration.nix
 	    ./r_packages.nix
 	    ./python_packages.nix
 	    ./packages.nix
@@ -17,23 +17,23 @@
     #services.spice-vdagentd.enable = true;
 
     # systemd bootloader
-    #boot.loader.systemd-boot.enable = true;
-    #boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
     # grub
-    boot.loader = {
-	systemd-boot.enable = false;
-	efi = {
-	    canTouchEfiVariables = true;
-	    efiSysMountPoint = "/boot";
-	};
-	grub = {
-	    devices = [ "nodev" ];
-	    enable = true;
-	    efiSupport = true;
-	    useOSProber = true;
-	};
-    };
+    #boot.loader = {
+    #    systemd-boot.enable = false;
+    #    efi = {
+    #        canTouchEfiVariables = true;
+    #        efiSysMountPoint = "/boot";
+    #    };
+    #    grub = {
+    #        devices = [ "nodev" ];
+    #        enable = true;
+    #        efiSupport = true;
+    #        useOSProber = true;
+    #    };
+    #};
 
 
     # kernel
@@ -107,18 +107,11 @@
     # for bash scripts 
     services.envfs.enable = true;
 
-    system.activationScripts.binbash = {
-	deps = [ "binsh" ];
-	text = ''
-	    ln -s /bin/sh /bin/bash
-	    '';
-    };
-
     # home directories
     systemd.tmpfiles.rules = [
 	"d /home/blair/Desktop 755 blair users -"
-	    "d /home/blair/Downloads 755 blair users -"
-	    "d /home/blair/bin 755 blair users -"
+	"d /home/blair/Downloads 755 blair users -"
+	"d /home/blair/bin 755 blair users -"
     ];
 
 
