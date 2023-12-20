@@ -3,7 +3,7 @@
 {
     imports =
 	[ 
-	    ./hardware-configuration.nix
+	./hardware-configuration.nix
 	    ./r_packages.nix
 	    ./python_packages.nix
 	    ./packages.nix
@@ -16,9 +16,26 @@
     # vm
     #services.spice-vdagentd.enable = true;
 
-    # bootloader
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    # systemd bootloader
+    #boot.loader.systemd-boot.enable = true;
+    #boot.loader.efi.canTouchEfiVariables = true;
+
+    # grub
+    boot.loader = {
+	systemd-boot.enable = false;
+	efi = {
+	    canTouchEfiVariables = true;
+	    efiSysMountPoint = "/boot";
+	};
+	grub = {
+	    devices = [ "nodev" ];
+	    enable = true;
+	    efiSupport = true;
+	    version = 2;
+	    useOSProber = true;
+	};
+    };
+
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -100,7 +117,7 @@
 
     # home directories
     systemd.tmpfiles.rules = [
-	    "d /home/blair/Desktop 755 blair users -"
+	"d /home/blair/Desktop 755 blair users -"
 	    "d /home/blair/Downloads 755 blair users -"
 	    "d /home/blair/bin 755 blair users -"
     ];
