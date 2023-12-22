@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # rebuild
-sudo nixos-rebuild switch
+sudo nixos-rebuild --upgrade switch
 
 # make R profile
 trash /home/blair/.Rprofile
