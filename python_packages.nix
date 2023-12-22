@@ -12,17 +12,17 @@
 		imutils
 
 		# scraping
-		python310Packages.selenium
+		selenium
 
 		# r console
-		python310Packages.radian
+		radian
 
 		# linode
-		python310Packages.boto
+		boto
 
 		# ssl
-		python310Packages.requests 
-		python310Packages.cryptography
+		requests 
+		cryptography
 
 	    ]))
     ];
