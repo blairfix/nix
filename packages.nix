@@ -37,6 +37,7 @@
 	# utilities
 	git
 	htop 
+	bottom
 	trash-cli 
 	man-db 
 	man-pages
