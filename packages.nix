@@ -145,7 +145,6 @@
 
 	# meetings
 	skypeforlinux
-	zoom
 
 	];
 }
