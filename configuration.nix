@@ -97,7 +97,11 @@
     users.users.blair = {
 	isNormalUser = true;
 	description = "blair";
-	extraGroups = [ "networkmanager" "wheel" ];
+	extraGroups = [ 
+	    "networkmanager" 
+	    "wheel" 
+	    "docker"
+	];
     };
 
     # unfree packages
