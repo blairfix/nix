@@ -80,7 +80,13 @@
     services.openssh.enable = true;
 
     # docker
-    virtualisation.docker.enable = true;
+    #virtualisation.docker.enable = true;
+
+    virtualisation.docker.rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+
 
     # sound with pipewire
     sound.enable = true;
