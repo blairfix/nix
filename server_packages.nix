@@ -2,6 +2,8 @@
 {
 
     # photoprism
+    #-------------------------------------------
+
     services.photoprism = {
 	enable = true;
 	port = 2342;
@@ -21,6 +23,8 @@
     };
 
     # jellyfin
+    #-------------------------------------------
+
     services.jellyfin = {
 	enable = true;
 	openFirewall = true;
@@ -32,6 +36,7 @@
 	pkgs.jellyfin
 	pkgs.jellyfin-web
 	pkgs.jellyfin-ffmpeg
+
 
     ];
 
