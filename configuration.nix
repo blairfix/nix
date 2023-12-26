@@ -40,7 +40,7 @@
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     # hostname
-    networking.hostName = "blair_laptop"; 
+    networking.hostName = 'blair-laptop'; 
 
     # networking
     networking.networkmanager.enable = true;
