@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 {
     imports =
 	[ 
@@ -11,10 +10,9 @@
 	    ./nvim.nix
 	    ./timers_server.nix
 	    ./timers_user.nix
+	    ./server_packages.nix
 	];
 
-    # vm
-    #services.spice-vdagentd.enable = true;
 
     # systemd bootloader
     boot.loader.systemd-boot.enable = true;
