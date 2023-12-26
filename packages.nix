@@ -146,5 +146,9 @@
 	# meetings
 	skypeforlinux
 
+	# containers
+	docker-compose
+	
+
 	];
 }

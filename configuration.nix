@@ -79,6 +79,9 @@
     # ssh
     services.openssh.enable = true;
 
+    # docker
+    virtualisation.docker.enable = true;
+
     # sound with pipewire
     sound.enable = true;
     hardware.pulseaudio.enable = false;
