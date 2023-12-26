@@ -22,6 +22,21 @@
 	};
     };
 
+    # MySQL
+    services.mysql = {
+	enable = true;
+	dataDir = "/data/mysql";
+	package = pkgs.mariadb;
+	ensureDatabases = [ "photoprism" ];
+	ensureUsers = [ {
+	    name = "photoprism";
+	    ensurePermissions = {
+		"photoprism.*" = "ALL PRIVILEGES";
+	    };
+	} ];
+    };
+
+
     # jellyfin
     #-------------------------------------------
 
@@ -37,10 +52,6 @@
 	pkgs.jellyfin-web
 	pkgs.jellyfin-ffmpeg
 
-
     ];
-
-
-
 
 }
