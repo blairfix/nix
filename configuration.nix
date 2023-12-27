@@ -3,13 +3,17 @@
     imports =
 	[ 
 	    ./hardware-configuration.nix
+
+	    # all configs
 	    ./r_packages.nix
 	    ./python_packages.nix
 	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    #./timers_server.nix
 	    ./timers_user.nix
+
+	    # server configs
+	    #./timers_server.nix
 	    #./server_packages.nix
 	];
 
