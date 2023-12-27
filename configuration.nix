@@ -8,9 +8,9 @@
 	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    ./timers_server.nix
+	    #./timers_server.nix
 	    ./timers_user.nix
-	    ./server_packages.nix
+	    #./server_packages.nix
 	];
 
 
@@ -76,13 +76,6 @@
 
     # ssh
     services.openssh.enable = true;
-
-    # docker
-    virtualisation.docker.rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-
 
     # sound with pipewire
     sound.enable = true;
