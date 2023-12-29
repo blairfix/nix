@@ -116,6 +116,7 @@
 	rsync
 	syncthing
 	dropbox
+	borgbackup
 
 	# misc tools
 	pdfgrep 
