@@ -11,7 +11,7 @@
 	# sway and associated utilities
 	swaybg
 	xwayland
-	light
+	brightnessctl
 	gammastep
 	wl-clipboard 
 	wtype
