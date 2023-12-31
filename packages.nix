@@ -25,7 +25,7 @@
 
 	# file browser
 	gnome.nautilus
-	#dolphin
+	dolphin
 
 	# terminal 
 	alacritty 
