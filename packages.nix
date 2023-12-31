@@ -16,6 +16,7 @@
 	wl-clipboard 
 	wtype
 	sway-launcher-desktop
+	waybar
 
 	# browser
 	firefox 
