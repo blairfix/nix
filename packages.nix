@@ -57,6 +57,7 @@
 
 	# audio
 	pavucontrol
+	pulseaudio
 
 	# ssh and network
 	openssh 
