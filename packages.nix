@@ -33,6 +33,7 @@
 	eza
 	fd
 	tree
+	killall
 
 	# utilities
 	git
