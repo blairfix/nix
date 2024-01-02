@@ -10,7 +10,7 @@
 	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    ./timers_user.nix
+	    #./timers_user.nix
 
 	    # server configs
 	    #./timers_server.nix
