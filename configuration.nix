@@ -63,7 +63,7 @@
     xdg.portal.wlr.enable = true;
 
     # syncthing
-    services.syncthing 
+    services.syncthing = {
 	enable = true;
 	user = "blair";
 	dataDir = "/home/blair/cloud_work"; 
