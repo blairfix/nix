@@ -118,7 +118,6 @@
 	rclone
 	rsync
 	syncthing
-	dropbox
 	borgbackup
 
 	# misc tools
