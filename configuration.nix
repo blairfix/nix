@@ -67,8 +67,8 @@
 	syncthing = {
 	    enable = true;
 	    user = "blair";
-	    dataDir = "/home/blair/Sync"; 
-	    #configDir = "/home/blair/.config/syncthing";
+	    dataDir = "/home/blair/cloud_work"; 
+	    configDir = "/home/blair/.config/syncthing";
 	};
     };
 
