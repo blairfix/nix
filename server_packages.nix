@@ -48,9 +48,7 @@
 	    PHOTOPRISM_DATABASE_USER = "photoprism";
 	    PHOTOPRISM_HTTP_COMPRESSION = "gzip";
 	    PHOTOPRISM_READONLY = "true"; 
-
-	    volumes = "/media/blair/multimedia/fix_media_archive/blair_emily:/photoprism/originals/pictures";
-
+	    PHOTOPRISM_ORIGINALS_PATH = "/media/blair/multimedia/fix_media_archive/";
 
 	};
     };
@@ -58,7 +56,7 @@
     # MySQL
     services.mysql = {
 	enable = true;
-	dataDir = "/data/mysql";
+	#dataDir = "/data/mysql";
 	package = pkgs.mariadb;
 	ensureDatabases = [ "photoprism" ];
 	ensureUsers = [ {
