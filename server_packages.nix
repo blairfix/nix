@@ -38,19 +38,18 @@
 
 	    PHOTOPRISM_SITE_URL = "http://localhost:2342/";
 	    PHOTOPRISM_SITE_TITLE = "Fix Family Photos";
-	    PHOTOPRISM_SITE_CAPTION: "Fix Family Photos";
+	    PHOTOPRISM_SITE_CAPTION = "Fix Family Photos";
 	    PHOTOPRISM_ADMIN_USER = "admin";
 	    PHOTOPRISM_ADMIN_PASSWORD = "...";
 	    PHOTOPRISM_DEFAULT_LOCALE = "en";
 	    PHOTOPRISM_DATABASE_DRIVER = "mysql";
-	    PHOTOPRISM_DATABASE_SERVER =  "mariadb:3306";
 	    PHOTOPRISM_DATABASE_NAME = "photoprism";
 	    PHOTOPRISM_DATABASE_SERVER = "/run/mysqld/mysqld.sock";
 	    PHOTOPRISM_DATABASE_USER = "photoprism";
 	    PHOTOPRISM_HTTP_COMPRESSION = "gzip";
 	    PHOTOPRISM_READONLY = "true"; 
 
-	    volumes = "/media/blair/multimedia/fix_media_archive/blair_emily:/photoprism/originals/pictures"
+	    volumes = "/media/blair/multimedia/fix_media_archive/blair_emily:/photoprism/originals/pictures";
 
 
 	};
