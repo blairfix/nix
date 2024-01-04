@@ -67,12 +67,7 @@
     };
 
     # originals path
-    fileSystems."/var/lib/private/photoprism" =
-    { device = "/home/blair/test";
-	options = [ "bind" ];
-    };
-
-    fileSystems."/var/lib/private/photoprism/originals" =
+    fileSystems."/var/lib/private/photoprism/originals/pictures" =
     { device = "/home/blair/test";
 	options = [ "bind" ];
     };
