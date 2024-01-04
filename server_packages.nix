@@ -48,7 +48,6 @@
 	    PHOTOPRISM_DATABASE_USER = "photoprism";
 	    PHOTOPRISM_HTTP_COMPRESSION = "gzip";
 	    PHOTOPRISM_READONLY = "true"; 
-	    PHOTOPRISM_ORIGINALS_PATH = "/media/blair/multimedia/fix_media_archive/";
 
 	};
     };
@@ -67,6 +66,10 @@
 	} ];
     };
 
-
+    # originals path
+    fileSystems."/var/lib/private/photoprism" =
+    { device = "/media/blair/multimedia/fix_media_archive/blair_emily";
+	options = [ "bind" ];
+    };
 
 }
