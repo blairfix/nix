@@ -1,23 +1,23 @@
 { config, ... }:
 {
-    # blair backup 
+
+    # borg backup 
     #----------------------------------------
 
-    systemd.timers."blair_backup" = {
+    systemd.timers."borg" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar="*-*-* 01:00:00";
-	    RandomizedDelaySec = "400";
+	    OnCalendar = "*-*-*  *:05:00";
 	    Persistent = "true";
-	    Unit = "blair_backup.service";
+	    Unit = "borg.service";
 	};
     };
 
-    systemd.services."blair_backup" = {
+    systemd.services."borg" = {
 	serviceConfig = {
 	    Type = "simple";
 	    User = "blair";
-	    ExecStart="/home/blair/cronjobs/active/blair_backup";
+	    ExecStart = "/home/blair/Projects/borg/backup.sh";
 	};
     };
 
@@ -72,8 +72,8 @@
     systemd.timers."rclone" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
-	    OnCalendar="*-*-* 19:32:00";
-	    RandomizedDelaySec = "400";
+	    OnCalendar = "00/4:10";
+	    RandomizedDelaySec = "60";
 	    Persistent = "true";
 	    Unit = "rclone.service";
 	};
