@@ -68,7 +68,12 @@
 
     # originals path
     fileSystems."/var/lib/private/photoprism" =
-    { device = "/media/blair/multimedia/fix_media_archive/blair_emily";
+    { device = "/home/blair/test";
+	options = [ "bind" ];
+    };
+
+    fileSystems."/var/lib/private/photoprism/originals" =
+    { device = "/home/blair/test";
 	options = [ "bind" ];
     };
 
