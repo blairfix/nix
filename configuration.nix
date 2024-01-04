@@ -14,7 +14,7 @@
 
 	    # server configs
 	    #./timers_server.nix
-	    #./server_packages.nix
+	    ./server_packages.nix
 	];
 
 
