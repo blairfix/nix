@@ -105,7 +105,7 @@
 	serviceConfig = {
 	    Type = "simple";
 	    User = "blair";
-	    ExecStart = "/home/blair/Dropbox/cloud_work/empirical_research/scrape_forbes/run.sh";
+	    ExecStart = "/home/blair/cloud_work/empirical_research/scrape_forbes/run.sh";
 	};
     };
 
