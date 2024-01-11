@@ -34,12 +34,7 @@
 	package = pkgs.nextcloud28;
 	hostName = "localhost";
 	config.adminpassFile = "/etc/nextcloud-admin-pass";
-	extraApps = with config.services.nextcloud.package.packages.apps; {
-	    inherit calendar tasks;
-	};
-	extraAppsEnable = true;
     };
-
 
 #
 #    # Photoprism
