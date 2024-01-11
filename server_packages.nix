@@ -25,12 +25,19 @@
 
     ];
 
-    # radical
+    # nextcloud
     #-------------------------------------------
 
-    services.radicale = {
+    environment.etc."nextcloud-admin-pass".text = "test123";
+    services.nextcloud = {
 	enable = true;
-	settings.server.hosts = [ "0.0.0.0:5232" ];
+	package = pkgs.nextcloud28;
+	hostName = "localhost";
+	config.adminpassFile = "/etc/nextcloud-admin-pass";
+	extraApps = with config.services.nextcloud.package.packages.apps; {
+	    inherit calendar tasks;
+	};
+	extraAppsEnable = true;
     };
 
 
