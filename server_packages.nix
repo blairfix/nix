@@ -20,23 +20,17 @@
 
 	# jellyfin
 	pkgs.jellyfin
-	pkgs.jellyfin-web
-	pkgs.jellyfin-ffmpeg
+	    pkgs.jellyfin-web
+	    pkgs.jellyfin-ffmpeg
 
     ];
 
-    # nextcloud
+    # radical
     #-------------------------------------------
 
-    services.nextcloud = {                
-	enable = true;                   
-	package = pkgs.nextcloud28;
-	hostName = "localhost";
-	config.adminpassFile = "/etc/nextcloud-admin-pass";
-	    extraApps = with config.services.nextcloud.package.packages.apps; {
-		inherit contacts calendar tasks;
-	    };
-	extraAppsEnable = true;
+    services.radicale = {
+	enable = true;
+	settings.server.hosts = [ "0.0.0.0:5232" ];
     };
 
 
