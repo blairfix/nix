@@ -35,6 +35,8 @@
 	fd
 	tree
 	killall
+	unzip
+
 
 	# utilities
 	git
