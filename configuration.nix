@@ -10,33 +10,15 @@
 	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-	    #./timers_user.nix
+
+
+	    ./systemd.nix
+	    #./grub.nix
 
 	    # server configs
 	    #./timers_server.nix
 	    #./server_packages.nix
 	];
-
-
-    # systemd bootloader
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-
-    # grub
-    #boot.loader = {
-    #    systemd-boot.enable = false;
-    #    efi = {
-    #        canTouchEfiVariables = true;
-    #        efiSysMountPoint = "/boot";
-    #    };
-    #    grub = {
-    #        devices = [ "nodev" ];
-    #        enable = true;
-    #        efiSupport = true;
-    #        useOSProber = true;
-    #    };
-    #};
-
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
