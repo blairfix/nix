@@ -4,27 +4,27 @@
 	[ 
 	    ./hardware-configuration.nix
 
-	    # all configs
+	    # configs
 	    ./r_packages.nix
 	    ./python_packages.nix
 	    ./packages.nix
 	    ./fonts.nix
 	    ./nvim.nix
-
-
-	    ./systemd.nix
-	    #./grub.nix
+	    ./bootloader.nix
 
 	    # server configs
 	    #./timers_server.nix
 	    #./server_packages.nix
 	];
 
+ 
+
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     # hostname
     networking.hostName = "blair-laptop"; 
+    #networking.hostName = "blair-server"; 
 
     # networking
     networking.networkmanager.enable = true;
