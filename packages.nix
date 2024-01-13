@@ -5,8 +5,9 @@
 	# iso generator
 	nixos-generators
 
-	# vm clipboard
+	# vm 
 	spice
+	gnome-boxes
 
 	# sway and associated utilities
 	swaybg
