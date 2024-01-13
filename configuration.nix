@@ -79,6 +79,10 @@
     # ssh
     services.openssh.enable = true;
 
+    # virtualization
+    virtualisation.libvirtd.enable = true;
+    programs.virt-manager.enable = true;
+
     # sound with pipewire
     sound.enable = true;
     hardware.pulseaudio.enable = false;
