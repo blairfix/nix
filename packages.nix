@@ -7,7 +7,7 @@
 
 	# vm 
 	spice
-	gnome-boxes
+	gnome.gnome-boxes
 
 	# sway and associated utilities
 	swaybg
