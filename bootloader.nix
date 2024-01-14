@@ -9,7 +9,6 @@
 	grub = lib.mkIf (config.networking.hostName == "blair-server") {
 	    devices = [ "nodev" ];
 	    enable = true;
-	    efiSupport = true;
 	    useOSProber = true;
 	};
 
