@@ -2,7 +2,7 @@
 {
     imports =
 	[ 
-	    ./hardware-configuration.nix
+	./hardware-configuration.nix
 
 	    # configs
 	    ./r_packages.nix
@@ -13,18 +13,15 @@
 	    ./bootloader.nix
 
 	    # server configs
-	    #./timers_server.nix
+	    #./server_timers.nix
 	    #./server_packages.nix
 	];
-
- 
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     # hostname
     networking.hostName = "blair-laptop"; 
-    #networking.hostName = "blair-server"; 
 
     # networking
     networking.networkmanager.enable = true;
@@ -101,8 +98,8 @@
     # home directories
     systemd.tmpfiles.rules = [
 	"d /home/blair/Desktop 755 blair users -"
-	"d /home/blair/Downloads 755 blair users -"
-	"d /home/blair/bin 755 blair users -"
+	    "d /home/blair/Downloads 755 blair users -"
+	    "d /home/blair/bin 755 blair users -"
     ];
 
 
