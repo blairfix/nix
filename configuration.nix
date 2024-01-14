@@ -15,7 +15,6 @@
 	    # server configs
 	    #./server_timers.nix
 	    #./server_packages.nix
-	    #./server_mounts.nix
 	];
 
     # kernel
