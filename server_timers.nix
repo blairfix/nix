@@ -150,7 +150,7 @@
 	serviceConfig = {
 	    Type = "simple";
 	    User = "blair";
-	    ExecStart = "/home/blair/Projects/scrape_twitter/download_followers_6.py";
+	    ExecStart = "/home/blair/Projects/scrape_twitter/download_followers_7.py";
 	};
     };
 
