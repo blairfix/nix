@@ -48,11 +48,16 @@
 	man-pages
 	wget
 	unrar
-	aspell
 	gnuplot
 	wdiff
 	exiftool
 	qpdf
+
+	# spell check
+	aspell
+	aspellDicts.en
+	aspellDicts.en-science
+
 
 	# linode
 	linode-cli
