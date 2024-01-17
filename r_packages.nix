@@ -6,7 +6,7 @@
 	R-with-my-packages = rWrapper.override{ 
 	    packages = with rPackages; [ 
 
-		tidyverse
+		#tidyverse
 		BH
 		data_table
 		doSNOW
@@ -22,13 +22,11 @@
 		stringi
 		mailR
 		microbenchmark
-		ngramr
 		oce
 		osfr
 		png
 		pracma
 		progress
-		readxlsb
 		rlecuyer
 		R_utils
 		Rcpp
@@ -45,13 +43,11 @@
 		fastmatch
 		webshot
 		RcppRoll
-		tm
 		ggcorrplot
 		xlsx
 		sf
 		igraph
 		tidygraph
-		tidyquant
 		ggraph
 		ggiraph
 		roll
@@ -59,7 +55,13 @@
 		magick
 		truncnorm
 		fuzzyjoin
-		ggtext
+
+		# tidy bug
+		#tidyquant
+		#ggtext
+		#tm
+		#ngramr
+		#readxlsb
 
 		
 		# blair's packages
