@@ -69,6 +69,7 @@
 	pulseaudio
 
 	# ssh and network
+	networkmanagerapplet
 	openssh 
 	sshpass
 	openvpn
