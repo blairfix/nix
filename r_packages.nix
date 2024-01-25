@@ -57,11 +57,12 @@
 		fuzzyjoin
 
 		# tidy bug
-		#tidyquant
-		#ggtext
-		#tm
-		#ngramr
-		#readxlsb
+		tidyverse
+		tidyquant
+		ggtext
+		tm
+		ngramr
+		readxlsb
 
 		
 		# blair's packages

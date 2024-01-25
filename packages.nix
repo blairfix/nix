@@ -23,6 +23,7 @@
 	firefox 
 	geckodriver 
 	lynx
+	nodePackages.mathjax
 
 	# file browser
 	gnome.nautilus
