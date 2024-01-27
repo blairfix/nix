@@ -38,6 +38,7 @@
 	tree
 	killall
 	unzip
+	file
 
 
 	# utilities
