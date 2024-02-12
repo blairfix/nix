@@ -8,8 +8,10 @@
 		pandas 
 		datetime
 		tqdm
-		grip
 		imutils
+
+		# markdown readme previews
+		#grip
 
 		# scraping
 		selenium
