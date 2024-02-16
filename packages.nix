@@ -109,7 +109,8 @@
 	gimp 
 	pngquant 
 	jpegoptim 
-	imagemagick
+	#imagemagick
+	imagemagickBig
 	imv
 
 	# audio and video tools
