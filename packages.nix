@@ -38,6 +38,7 @@
 	tree
 	killall
 	unzip
+	zip
 	file
 
 
@@ -100,7 +101,7 @@
 	# documents viewers
 	okular 
 	evince
-	bookworm
+	foliate
 	#calibre
 	zathura
 
