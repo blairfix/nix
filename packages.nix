@@ -100,7 +100,8 @@
 	# documents viewers
 	okular 
 	evince
-	calibre
+	bookworm
+	#calibre
 	zathura
 
 	# image viewers and image manipulation
