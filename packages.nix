@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
     environment.systemPackages = with pkgs;  [ 
 
 	# iso generator
@@ -55,6 +54,8 @@
 	wdiff
 	exiftool
 	qpdf
+	csvtool
+	yt-dlp
 
 	# spell check
 	aspell
@@ -96,7 +97,7 @@
 
 	# office suites
 	libreoffice
-	wpsoffice
+	onlyoffice-bin
 
 	# documents viewers
 	okular 
@@ -165,7 +166,9 @@
 
 	# containers
 	docker-compose
-	
+
+	# games
+	#retroarchFull
 
 	];
 }
