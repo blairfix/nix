@@ -1,25 +1,48 @@
 { config, ... }:
 {
 
-    # borg backup 
+    # borg blair
     #----------------------------------------
 
-    systemd.timers."borg" = {
+    systemd.timers."borg_blair" = {
 	wantedBy = [ "timers.target" ];
 	timerConfig = {
 	    OnCalendar = "*-*-*  *:05:00";
 	    Persistent = "true";
-	    Unit = "borg.service";
+	    Unit = "borg_blair.service";
 	};
     };
 
-    systemd.services."borg" = {
+    systemd.services."borg_blair" = {
 	serviceConfig = {
 	    Type = "simple";
 	    User = "blair";
-	    ExecStart = "/home/blair/Projects/borg/backup.sh";
+	    ExecStart = "/home/blair/Projects/borg/blair/backup.sh";
 	};
     };
+
+
+
+    # borg media
+    #----------------------------------------
+
+    systemd.timers."borg_media" = {
+	wantedBy = [ "timers.target" ];
+	timerConfig = {
+	    OnCalendar = "00/6:20";
+	    Persistent = "true";
+	    Unit = "borg_media.service";
+	};
+    };
+
+    systemd.services."borg_media" = {
+	serviceConfig = {
+	    Type = "simple";
+	    User = "blair";
+	    ExecStart = "/home/blair/Projects/borg/media/backup.sh";
+	};
+    };
+
 
 
     # camera sync
@@ -43,29 +66,8 @@
 	};
     };
 
- 
-    # media backup
-    #----------------------------------------
 
-    systemd.timers."media_backup" = {
-	wantedBy = [ "timers.target" ];
-	timerConfig = {
-	    OnCalendar="*-*-* 22:00:00";
-	    RandomizedDelaySec = "400";
-	    Persistent = "true";
-	    Unit = "media_backup.service";
-	};
-    };
 
-    systemd.services."media_backup" = {
-	serviceConfig = {
-	    Type = "simple";
-	    User = "blair";
-	    ExecStart="/home/blair/cronjobs/active/media_backup";
-	};
-    };
-
-  
     # rclone
     #----------------------------------------
 
@@ -197,8 +199,6 @@
 	    ExecStart = "/home/blair/Projects/scrape_wordpress/RUNALL.sh";
 	};
     };
-
-
 
 
 }
