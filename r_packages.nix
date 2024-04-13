@@ -55,7 +55,6 @@
 		magick
 		truncnorm
 		fuzzyjoin
-		tabulizer
 
 		# tidy bug
 		tidyverse

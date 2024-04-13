@@ -56,6 +56,7 @@
 	qpdf
 	csvtool
 	yt-dlp
+	poppler_utils
 
 	# spell check
 	aspell
