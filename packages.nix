@@ -72,6 +72,8 @@
 	# audio
 	pavucontrol
 	pulseaudio
+	audacity
+	id3v2
 
 	# ssh and network
 	networkmanagerapplet
