@@ -6,7 +6,10 @@
 	enable = true;
 	configure = {
 	    packages.myVimPackage = with pkgs.vimPlugins; {
-		start = [ goyo-vim  ];
+		start = [
+		    goyo-vim 
+		    awesome-vim-colorschemes
+		];
 	    };
 	};
     };

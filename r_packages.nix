@@ -6,7 +6,6 @@
 	R-with-my-packages = rWrapper.override{ 
 	    packages = with rPackages; [ 
 
-		#tidyverse
 		BH
 		data_table
 		doSNOW
@@ -55,8 +54,9 @@
 		magick
 		truncnorm
 		fuzzyjoin
+		ppcor
 
-		# tidy bug
+		#tidyverse 
 		tidyverse
 		tidyquant
 		ggtext

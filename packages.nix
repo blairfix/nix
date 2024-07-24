@@ -25,7 +25,7 @@
 	nodePackages.mathjax
 
 	# file browser
-	gnome.nautilus
+	nautilus
 	dolphin
 
 	# terminal 
@@ -73,7 +73,6 @@
 	pavucontrol
 	pulseaudio
 	audacity
-	id3v2
 
 	# ssh and network
 	networkmanagerapplet
@@ -121,7 +120,7 @@
 
 	# audio and video tools
 	audacity 
-	gnome.cheese
+	cheese
 	ffmpeg
 	vlc
 	kazam

@@ -20,11 +20,14 @@
 		radian
 
 		# linode
-		boto
+		#boto
 
 		# ssl
 		requests 
 		cryptography
+
+		# audio
+		eyeD3
 
 	    ]))
     ];
