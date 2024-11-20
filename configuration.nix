@@ -39,7 +39,10 @@
     };
 
     # wayland screen sharing
-    xdg.portal.wlr.enable = true;
+    xdg.portal = {
+	enable = true;
+	wlr.enable = true;
+    };
 
     # syncthing
     services.syncthing = {
@@ -71,8 +74,10 @@
 	alsa.enable = true;
 	alsa.support32Bit = true;
 	pulse.enable = true;
-	jack.enable = true;
+	#jack.enable = true;
     };
+
+    services.pipewire.wireplumber.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
     # services.xserver.libinput.enable = true;

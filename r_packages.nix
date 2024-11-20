@@ -9,6 +9,7 @@
 		BH
 		data_table
 		doSNOW
+		doParallel
 		cowplot
 		foreach
 		ggrepel
@@ -55,6 +56,8 @@
 		truncnorm
 		fuzzyjoin
 		ppcor
+		profvis
+
 
 		#tidyverse 
 		tidyverse

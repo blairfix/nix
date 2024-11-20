@@ -5,8 +5,8 @@
 	nixos-generators
 
 	# vm 
-	spice
-	gnome-boxes
+	#spice
+	#gnome-boxes
 
 	# sway and associated utilities
 	swaybg
@@ -39,7 +39,8 @@
 	unzip
 	zip
 	file
-
+	ncdu
+	xlsx2csv 
 
 	# utilities
 	git
@@ -156,7 +157,7 @@
 	slurp
 
 	# cd
-	k3b
+	#k3b
 	cdrtools
 	cdrdao
 
