@@ -23,6 +23,7 @@
 	geckodriver 
 	lynx
 	nodePackages.mathjax
+	chromium
 
 	# file browser
 	nautilus

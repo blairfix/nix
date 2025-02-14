@@ -11,6 +11,8 @@
 	    ./fonts.nix
 	    ./nvim.nix
 
+	    #./test.nix
+
 	];
 
     # bootloader
@@ -58,7 +60,15 @@
     services.tailscale.enable = true;
 
     # ssh
-    services.openssh.enable = true;
+    services.openssh = {
+	enable = true;
+	ports = [ 22 ];
+	settings = {
+	    PasswordAuthentication = false;
+	    PermitRootLogin = "no"; 
+	};
+    };
+
 
     # virtualization
     virtualisation.libvirtd.enable = true;
