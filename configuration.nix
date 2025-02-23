@@ -56,6 +56,7 @@
     # cups
     services.printing.enable = true;
 
+    
     # tailscale
     services.tailscale.enable = true;
 

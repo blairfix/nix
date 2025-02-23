@@ -23,7 +23,6 @@
 	geckodriver 
 	lynx
 	nodePackages.mathjax
-	chromium
 
 	# file browser
 	nautilus
@@ -173,6 +172,7 @@
 
 	# games
 	#retroarchFull
+	#(callPackage ./brother_HL-2040.nix {})
 
 	];
 }
