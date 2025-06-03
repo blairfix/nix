@@ -2,16 +2,16 @@
 {
     imports =
 	[ 
-	    ./hardware-configuration.nix
+	./hardware-configuration.nix
 
-	    # configs
-	    ./r_packages.nix
-	    ./python_packages.nix
-	    ./packages.nix
-	    ./fonts.nix
-	    ./nvim.nix
+	# configs
+	./r_packages.nix
+	./python_packages.nix
+	./packages.nix
+	./fonts.nix
+	./nvim.nix
 
-	    #./test.nix
+	#./test.nix
 
 	];
 
@@ -56,7 +56,6 @@
     # cups
     services.printing.enable = true;
 
-    
     # tailscale
     services.tailscale.enable = true;
 

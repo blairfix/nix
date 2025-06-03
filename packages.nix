@@ -25,8 +25,7 @@
 	nodePackages.mathjax
 
 	# file browser
-	nautilus
-	dolphin
+	kdePackages.dolphin
 
 	# terminal 
 	alacritty 
@@ -41,6 +40,7 @@
 	file
 	ncdu
 	xlsx2csv 
+	rename
 
 	# utilities
 	git
@@ -55,6 +55,7 @@
 	wdiff
 	exiftool
 	qpdf
+	ghostscript
 	csvtool
 	yt-dlp
 	poppler_utils
@@ -103,7 +104,7 @@
 	onlyoffice-bin
 
 	# documents viewers
-	okular 
+	kdePackages.okular
 	evince
 	foliate
 	#calibre
@@ -115,7 +116,6 @@
 	gimp 
 	pngquant 
 	jpegoptim 
-	#imagemagick
 	imagemagickBig
 	imv
 
@@ -125,6 +125,9 @@
 	ffmpeg
 	vlc
 	kazam
+
+	# video editing
+	shotcut
 
 	# finance
 	gnucash
@@ -164,15 +167,6 @@
 	# hugo
 	hugo
 
-	# meetings
-	skypeforlinux
-
-	# containers
-	docker-compose
-
-	# games
-	#retroarchFull
-	#(callPackage ./brother_HL-2040.nix {})
 
 	];
 }

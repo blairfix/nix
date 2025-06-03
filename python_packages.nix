@@ -15,6 +15,7 @@
 
 	    # scraping
 	    selenium
+	    internetarchive
 
 	    # r console
 	    radian
@@ -28,6 +29,13 @@
 
 	    # audio
 	    eyeD3
+
+	    # calendar
+	    caldav
+
+	    # translate
+	    deep-translator
+
 
     ]))
 	];
