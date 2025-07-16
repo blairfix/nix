@@ -18,7 +18,7 @@
 	    internetarchive
 
 	    # r console
-	    radian
+	    #radian
 
 	    # linode
 	    #boto

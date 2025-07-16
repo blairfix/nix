@@ -41,6 +41,7 @@
 	ncdu
 	xlsx2csv 
 	rename
+	radian
 
 	# utilities
 	git
