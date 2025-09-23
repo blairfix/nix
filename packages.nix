@@ -1,6 +1,7 @@
 { pkgs, ... }: {
     environment.systemPackages = with pkgs;  [ 
 
+
 	# iso generator
 	nixos-generators
 
@@ -60,6 +61,7 @@
 	csvtool
 	yt-dlp
 	poppler_utils
+	mdbtools
 
 	# spell check
 	aspell

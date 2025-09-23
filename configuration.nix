@@ -15,11 +15,13 @@
 
 	];
 
+
     # bootloader
     boot.loader.systemd-boot.enable = true;
 
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
+
 
     # hostname
     networking.hostName = "blair-laptop"; 
@@ -105,7 +107,6 @@
 
     # unfree packages
     nixpkgs.config.allowUnfree = true;
-
 
     # for bash scripts 
     services.envfs.enable = true;

@@ -36,6 +36,9 @@
 	    # translate
 	    deep-translator
 
+	    # email
+	    imap-tools
+
 
     ]))
 	];
