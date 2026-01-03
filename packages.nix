@@ -60,7 +60,7 @@
 	ghostscript
 	csvtool
 	yt-dlp
-	poppler_utils
+	poppler-utils
 	mdbtools
 
 	# spell check
@@ -104,7 +104,7 @@
 
 	# office suites
 	libreoffice
-	onlyoffice-bin
+	onlyoffice-desktopeditors
 
 	# documents viewers
 	kdePackages.okular
@@ -148,14 +148,13 @@
 	pdfgrep 
 	engauge-digitizer
 
-
 	# android packages
-	libmtp
-	heimdall
-	android-tools
+	#libmtp
+	#heimdall
+	#android-tools
 
 	# icon themes
-	lxappearance
+	#lxappearance
 	#breeze
 
 	# screenshot
@@ -164,12 +163,17 @@
 
 	# cd
 	#k3b
-	cdrtools
-	cdrdao
+	#cdrtools
+	#cdrdao
 
 	# hugo
 	hugo
 
+	# dell bios
+	dell-command-configure
+
+	# youtube client
+	freetube
 
 	];
 }

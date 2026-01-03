@@ -56,6 +56,8 @@
 		fuzzyjoin
 		ppcor
 		profvis
+		matrixStats
+		latex2exp
 
 
 		#tidyverse 

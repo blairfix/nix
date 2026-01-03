@@ -28,7 +28,7 @@
 	    cryptography
 
 	    # audio
-	    eyeD3
+	    eyed3
 
 	    # calendar
 	    caldav
