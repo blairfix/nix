@@ -62,6 +62,7 @@
 	yt-dlp
 	poppler-utils
 	mdbtools
+	libwebp
 
 	# spell check
 	aspell
