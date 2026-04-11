@@ -53,12 +53,12 @@
 		poweRlaw
 		magick
 		truncnorm
-		fuzzyjoin
+		#fuzzyjoin
 		ppcor
 		profvis
 		matrixStats
 		latex2exp
-
+		rnaturalearth
 
 		#tidyverse 
 		tidyverse
