@@ -113,7 +113,7 @@
 		 owner = "blairfix";
 		 repo = "bfstr";
 		 rev = "master";
-		 sha256 = "sha256-Ip1mwKG0dn4uoXueCWNF4X+QjI5ZojGw1l9FNDhVz/M=";
+		 sha256 = "sha256-AAYmACx20J+k+c0FHo6KJZGyVgTC/cHCyq0UHj5Sn5g=";
 		 };
 		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
 		 })
