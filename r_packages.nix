@@ -59,6 +59,7 @@
 		matrixStats
 		latex2exp
 		rnaturalearth
+		countrycode
 
 		#tidyverse 
 		tidyverse
@@ -69,72 +70,77 @@
 		#readxlsb
 
 
-	    # blair's packages
-	    (buildRPackage {
-	     name = "bfstr";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "bfstr";
-	     rev = "master";
-	     sha256 = "sha256-oZCUpxnmagSWB247c9fHAArgVOIPGnZqHucuuCUM9kE";
-	     };
-	     propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-	     })
+		# bfgg
+		(buildRPackage {
+		 name = "bfgg";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "bfgg";
+		 rev = "master";
+		 sha256 = "sha256-y2E8QYjiuHHVxgS+LXv5nYL8RBFDekD5nYgRdNZly7g";
+		 };
+		 propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
+		 })
 
-	    (buildRPackage {
-	     name = "bfstat";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "bfstat";
-	     rev = "master";
-	     sha256 = "sha256-fuCCJZHZoXkVycMnHZ37HGd2wwetLbAVWryjBNeWSUc";
-	     };
-	     propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-	     })
+		# bfread
+		(buildRPackage {
+		 name = "bfread";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "bfread";
+		 rev = "master";
+		 sha256 = "sha256-tcqDT1Ew15V6a3tZim/HlbFGXOMuMUJakOavduUfOto=";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
+		 })
 
-	    (buildRPackage {
-	     name = "bfgg";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "bfgg";
-	     rev = "master";
-	     sha256 = "sha256-y2E8QYjiuHHVxgS+LXv5nYL8RBFDekD5nYgRdNZly7g";
-	     };
-	     propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
-	     })
+		# bfstat
+		(buildRPackage {
+		 name = "bfstat";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "bfstat";
+		 rev = "master";
+		 sha256 = "sha256-tw7oSonnCB5Rgpg4aawxW+NHZNt9leQdQi//QEK5mP8=";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
+		 })
 
-	    (buildRPackage {
-	     name = "hmod";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "hmod";
-	     rev = "master";
-	     sha256 = "sha256-XMMNUk5suFWxEnzvpy8BBMr/GGm1/RID0M055R+HRM0";
-	     };
-	     propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat data_table ];
-	     })
+		# bfstr
+		(buildRPackage {
+		 name = "bfstr";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "bfstr";
+		 rev = "master";
+		 sha256 = "sha256-Ip1mwKG0dn4uoXueCWNF4X+QjI5ZojGw1l9FNDhVz/M=";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
+		 })
+		
+		# hmod
+		(buildRPackage {
+		 name = "hmod";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "hmod";
+		 rev = "master";
+		 sha256 = "sha256-A9jW/sFggYCjjRDzfbCBPC2dPLnoB6KvtRH+CnY+DsQ=";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH RcppZiggurat data_table ];
+		 })
 
-	    (buildRPackage {
-	     name = "hubbert";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "hubbert";
-	     rev = "master";
-	     sha256 = "sha256-5RwJwmDQLE97trrP4ZPh/GQJrY4YCZ8uoaQH2cY9H0c=";
-	     };
-	     propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-	     })
-
-	    (buildRPackage {
-	     name = "bfread";
-	     src = fetchFromGitHub {
-	     owner = "blairfix";
-	     repo = "bfread";
-	     rev = "master";
-	     sha256 = "sha256-O5YLpM+v5ITOVlSw5lLGVN3nBWwkcl1IMLqtOc6rMas=";
-	     };
-	     propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
-	     })
+		# hubbert
+		(buildRPackage {
+		 name = "hubbert";
+		 src = fetchFromGitHub {
+		 owner = "blairfix";
+		 repo = "hubbert";
+		 rev = "master";
+		 sha256 = "sha256-jmaEq9b19UnPrJIWXSq51SL5Sneq1FRE8IA0t30Ek6k=";
+		 };
+		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
+		 })
 
 	    ];
 	};

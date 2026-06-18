@@ -23,7 +23,7 @@
 	firefox 
 	geckodriver 
 	lynx
-	nodePackages.mathjax
+	mathjax
 
 	# file browser
 	kdePackages.dolphin
@@ -63,6 +63,9 @@
 	poppler-utils
 	mdbtools
 	libwebp
+
+	# ai
+	ollama
 
 	# spell check
 	aspell
