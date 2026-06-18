@@ -77,7 +77,7 @@
 		 owner = "blairfix";
 		 repo = "bfgg";
 		 rev = "master";
-		 sha256 = "sha256-y2E8QYjiuHHVxgS+LXv5nYL8RBFDekD5nYgRdNZly7g";
+		 sha256 = "sha256-gFm7i4JutDdUrbd8DYo1fdpZDDoIC1ucivy/co3cT0w=";
 		 };
 		 propagatedBuildInputs = [ ggplot2 gridExtra data_table here ];
 		 })
@@ -101,7 +101,7 @@
 		 owner = "blairfix";
 		 repo = "bfstat";
 		 rev = "master";
-		 sha256 = "sha256-tw7oSonnCB5Rgpg4aawxW+NHZNt9leQdQi//QEK5mP8=";
+		 sha256 = "sha256-fixnyiU22NeiB+vAg+1+/Y20pPn7udbtLm0awVzkjzY=";
 		 };
 		 propagatedBuildInputs = [ Rcpp RcppArmadillo BH ];
 		 })
