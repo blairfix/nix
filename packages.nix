@@ -63,9 +63,10 @@
 	poppler-utils
 	mdbtools
 	libwebp
+	smartmontools
 
 	# ai
-	ollama
+	#ollama
 
 	# spell check
 	aspell
@@ -89,7 +90,6 @@
 	sshpass
 	openvpn
 	tailscale
-	rtorrent
 
 	# latex
 	texliveFull
@@ -97,7 +97,6 @@
 
 
 	# text editors and command line tools for text
-	#neovim 
 	vimPlugins.vim-plug
 	pandoc
 	pandoc-eqnos
@@ -143,7 +142,6 @@
 	kid3
 
 	# syncing utilities
-	rclone
 	rsync
 	syncthing
 	borgbackup
