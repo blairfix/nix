@@ -22,6 +22,11 @@
     # kernel
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
+    swapDevices = [{
+	device = "/var/lib/swapfile";
+	size = 16*1024; # 16 GiB
+    }];
+
 
     # hostname
     networking.hostName = "blair-laptop"; 
@@ -70,6 +75,18 @@
 	    PermitRootLogin = "no"; 
 	};
     };
+
+
+    # flatpak
+    services.flatpak.enable = true;
+    systemd.services.flatpak-repo = {
+	wantedBy = [ "multi-user.target" ];
+	path = [ pkgs.flatpak ];
+	script = ''
+	    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	    '';
+    };
+
 
 
     # virtualization

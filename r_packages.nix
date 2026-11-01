@@ -67,12 +67,14 @@
 		ggtext
 		tm
 		ngramr
+		ggarrow
 		#readxlsb
 
 
 		# bfgg
 		(buildRPackage {
-		 name = "bfgg";
+		 pname = "bfgg";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "bfgg";
@@ -84,7 +86,8 @@
 
 		# bfread
 		(buildRPackage {
-		 name = "bfread";
+		 pname = "bfread";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "bfread";
@@ -96,7 +99,8 @@
 
 		# bfstat
 		(buildRPackage {
-		 name = "bfstat";
+		 pname = "bfstat";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "bfstat";
@@ -108,7 +112,8 @@
 
 		# bfstr
 		(buildRPackage {
-		 name = "bfstr";
+		 pname = "bfstr";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "bfstr";
@@ -120,7 +125,8 @@
 		
 		# hmod
 		(buildRPackage {
-		 name = "hmod";
+		 pname = "hmod";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "hmod";
@@ -132,7 +138,8 @@
 
 		# hubbert
 		(buildRPackage {
-		 name = "hubbert";
+		 pname = "hubbert";
+		 version = "0.1";
 		 src = fetchFromGitHub {
 		 owner = "blairfix";
 		 repo = "hubbert";

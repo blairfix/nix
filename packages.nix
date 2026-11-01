@@ -71,7 +71,6 @@
 	# spell check
 	aspell
 	aspellDicts.en
-	aspellDicts.en-science
 
 
 	# linode
@@ -92,8 +91,9 @@
 	tailscale
 
 	# latex
-	texliveFull
-	texstudio
+	#texliveFull
+	texliveSmall
+	#texstudio
 
 
 	# text editors and command line tools for text

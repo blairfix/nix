@@ -2,7 +2,7 @@
 {
     environment.systemPackages = with pkgs;  [ 
 
-	( python3.withPackages( ps: with ps; [ 
+	(python3.withPackages (ps: with ps; [
 
 	    # compute
 	    pandas 
